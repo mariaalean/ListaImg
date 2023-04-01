@@ -1,20 +1,62 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import InicioView from '../views/InicioView.vue'
+import HelpView from '../views/HelpView.vue'
+import ContactView from '../views/ContactView.vue'
+import AccederView from '../views/AccederView.vue'
+import AboutView from '../views/AboutViews.vue'
+import InfoView from '../views/InfoView.vue'
+import SomosView from '../views/SomosView.vue'
+import CardView from '../views/CardView.vue'
+import ConsulServer from '../views/ConsulServer.vue'
+
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+  path: '/',
+    name: 'inicio',
+    component: InicioView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/help',
+      name: 'help',
+      component: HelpView
+    },
+    {
+      path: '/contactanos',
+        name: 'Contactanos',
+        component: ContactView
+      },
+      {
+        path: '/acceder',
+          name: 'Acceder',
+          component: AccederView
+        },
+        {
+          path: '/about',
+            name: 'About',
+            component: AboutView
+          },
+          {
+            path: '/info',
+              name: 'Info',
+              component: InfoView
+            },
+            {
+              path: '/somos',
+                name: 'Quienes Somos',
+                component: SomosView
+              },
+                {
+                  path: '/carta',
+                    name: 'carta',
+                    component: CardView
+                  },
+                  {
+                    path: '/consul',
+                      name: 'consul',
+                      component: ConsulServer
+                    },
+
 ]
 
 const router = createRouter({
